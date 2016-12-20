@@ -1,7 +1,7 @@
 
 # gh-page-test
 
-c3 demo
+[View the deployed app here](https://katiewright26.github.io/gh-page-test/)
 
 ## how
 
