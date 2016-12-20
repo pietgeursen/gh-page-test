@@ -1,46 +1,10 @@
 <html>
   <head>
-    <link href="styles/c3.css" rel="stylesheet" type="text/css" />
-    <script src="javascript/d3.min.js" type="text/javascript"></script>
-    <script src="javascript/c3.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-      window.onload=function(){
-        var chart = c3.generate({
-          data: {
-            columns: [
-              ['govt', 300, 350, 300, 10, 40, 160],
-              ['ngovt', 130, 100, 140, 4, 150, 2],
-              ['dist', 5, 4, 1, 0, 5, 2]
-            ],
-            types: {
-              govt: 'bar',
-              ngovt: 'bar'
-            },
-            axes: {
-              dist: 'y2'
-            },
-            axis: {
-              y: {
-                label: {
-                  text: 'Frequency',
-                  position: 'outer-middle'
-                }
-              },
-              y2: {
-                show: true,
-                label: {
-                  text: 'Distribution',
-                  position: 'outer-middle'
-                }
-              }
-            }
-          }
-        });
-      }
-    </script>
+    <link href="c3.css" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
       <div id="chart"></div>
+      <script src="bundle.js" type="text/javascript"></script>
   </body>
 </html>
