@@ -9,23 +9,31 @@
         var chart = c3.generate({
           data: {
             columns: [
-              ['data1', 300, 350, 300, 0, 0, 0],
-              ['data2', 130, 100, 140, 200, 150, 50]
+              ['govt', 300, 350, 300, 10, 40, 160],
+              ['ngovt', 130, 100, 140, 4, 150, 2],
+              ['dist', 5, 4, 1, 0, 5, 2]
             ],
             types: {
-              data1: 'area',
-              data2: 'area-spline'
-            }
-          },
-          axis: {
-            y: {
-              padding: {bottom: 0},
-              min: 0
+              govt: 'bar',
+              ngovt: 'bar'
             },
-            x: {
-              padding: {left: 0},
-              min: 0,
-              show: false
+            axes: {
+              dist: 'y2'
+            },
+            axis: {
+              y: {
+                label: {
+                  text: 'Frequency',
+                  position: 'outer-middle'
+                }
+              },
+              y2: {
+                show: true,
+                label: {
+                  text: 'Distribution',
+                  position: 'outer-middle'
+                }
+              }
             }
           }
         });
