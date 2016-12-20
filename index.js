@@ -3,23 +3,37 @@ window.onload=function(){
   var chart = c3.generate({
     data: {
       columns: [
-        ['data1', 300, 350, 300, 0, 0, 0],
-        ['data2', 130, 100, 140, 200, 150, 50]
+        ['govt', 300, 350, 300, 20, 10, 50],
+        ['ngovt', 130, 100, 140, 200, 150, 50],
+        ['dist', 1, 3, 5, 5, 3, 2]
       ],
       types: {
-        data1: 'area',
-        data2: 'area-spline'
+        govt: 'bar',
+        ngovt: 'bar'
+      },
+      axes: {
+        dist: 'y2'
       }
     },
     axis: {
       y: {
         padding: {bottom: 0},
-        min: 0
+        min: 0,
+        label: {
+          text: 'Frequency of event',
+          position: 'outer-middle'
+        }
       },
       x: {
-        padding: {left: 0},
+      },
+      y2: {
+        show: true,
+        max: 5,
         min: 0,
-        show: false
+        label: {
+          text: 'Distribution (high to low)',
+          position: 'outer-middle'
+        }
       }
     }
   });
