@@ -9,15 +9,8 @@
     <link rel="stylesheet" href="styles/c3.css" type="text/css">
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="c3.min.js" type="type/javascript"></script>
-
-  </head>
-  <body>
-    <p>Hello world</p>
-    <div id="chart"></div>
-    <script src="c3.min.js" type="type/javascript"></script>
-
-    <script>
-      var chart = c3.generate({
+    <script type="text/javascript">
+      let chart = c3.generate({
         bindTo: '#chart',
         data: {
           columns: [
@@ -28,5 +21,9 @@
       });
     </script>
 
+  </head>
+  <body>
+    <p>Hello world</p>
+    <div id="chart"></div>
   </body>
 </html>
