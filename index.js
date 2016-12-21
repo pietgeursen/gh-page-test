@@ -2,7 +2,17 @@ var c3 = require('c3')
 var d3 = require('d3')
 
 
+
 window.onload=function(){
+  var arrayOfLinks = ['www.google.com','www.facebook.com','www.yahoo.com','www.bing.com', 'www.google.com', 'www.github.com']
+
+  d3.selectAll('.c3-axis-x .tick tspan').each(function(d,i) {
+    var self = d3.select(this);
+    console.log(self)
+    var text = self.text();
+    self.html("<a xlink:href='"+arrayOfLinks[i]+"'>"+text+"</a>");
+  })
+  
   var chart = c3.generate({
     data: {
       columns: [
