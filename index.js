@@ -1,10 +1,13 @@
 var c3 = require('c3')
+var d3 = require('d3')
+
+
 window.onload=function(){
   var chart = c3.generate({
     data: {
       columns: [
-        ['govt', 300, 350, 300, 20, 10, 50],
-        ['ngovt', 130, 100, 140, 200, 150, 50],
+        ['govt', 0.3, 0.35, 0.3, 0.8, 0.1, 0.5],
+        ['ngovt', 0.39, 0.3, 0.8, 0.2, 0.75, 0.5],
         ['dist', 1, 3, 5, 5, 3, 2]
       ],
       types: {
@@ -19,12 +22,18 @@ window.onload=function(){
       y: {
         padding: {bottom: 0},
         min: 0,
+        max: 0.9,
         label: {
-          text: 'Frequency of event',
+          text: 'Frequency (%)',
           position: 'outer-middle'
+        },
+        tick: {
+          format: d3.format("%,")
         }
       },
       x: {
+        type: 'category',
+        categories: ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5', 'Group 6'],
       },
       y2: {
         show: true,
