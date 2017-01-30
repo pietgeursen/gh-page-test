@@ -4,15 +4,29 @@ var d3 = require('d3')
 
 
 window.onload=function(){
-  var arrayOfLinks = ['http://google.com','http://www.facebook.com','http://www.yahoo.com','www.bing.com', 'http://www.google.com', 'http://www.github.com']
+  var url = 'https://katiewright26.gitbooks.io/test-book/content/country'
+  var arrayOfLinks = [
+    url + '-1.html',
+    url + '-2.html',
+    url + '-3.html',
+    url + '-4.html',
+    url + '-5.html',
+    url + '-6.html',
+    url + '-7.html',
+    url + '-8.html',
+    url + '-9.html',
+    url + '-10.html',
+    url + '-11.html',
+    url + '-12.html'
+    ]
 
-  
+
   var chart = c3.generate({
     data: {
       columns: [
-        ['govt', 0.3, 0.35, 0.3, 0.8, 0.1, 0.5],
-        ['ngovt', 0.39, 0.3, 0.8, 0.2, 0.75, 0.5],
-        ['dist', 1, 3, 5, 5, 3, 2]
+        ['govt', 0.3, 0.35, 0.3, 0.8, 0.1, 0.5, 0.75, 0.64, 0.1, 0.15, 0.9, 0.66],
+        ['ngovt', 0.39, 0.3, 0.8, 0.2, 0.75, 0.5, 0.7, 0.45, 0.27, 0.4, 0.8, 0.32],
+        ['dist', 1, 3, 5, 5, 3, 2, 2, 4, 5, 1, 1, 0]
       ],
       types: {
         govt: 'bar',
@@ -37,7 +51,8 @@ window.onload=function(){
       },
       x: {
         type: 'category',
-        categories: ['Group 1', 'Group 2', 'Group 3', 'Group 4', 'Group 5', 'Group 6'],
+        categories: ['Country 1', 'Country 2', 'Country 3', 'Country 4', 'Country 5', 'Country 6',
+      'Country 7', 'Country 8', 'Country 9', 'Country 10', 'Country 11', 'Country 12'],
       },
       y2: {
         show: true,
