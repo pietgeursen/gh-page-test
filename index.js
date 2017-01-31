@@ -1,12 +1,11 @@
-// var c3 = require('c3')
 var d3 = require('d3')
+
 
 window.onload=function(){
 
-  var width = window.innerWidth /2.5,
-    height = window.innerWidth /2.5,
-    radius = (Math.min(width, height) / 2) - 100;
-
+  var width = window.innerWidth / 2;
+  var height = window.innerWidth / 2;
+  var radius = (Math.min(width, height) / 2) - 100;
   var formatNumber = d3.format(",d");
 
   var x = d3.scaleLinear()
