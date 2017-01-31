@@ -1,213 +1,428 @@
 {
-  "flare": {
-    "Country": {
-      "countryOne": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryTwo": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryThree": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryFour": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryFive": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countrySix": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countrySeven": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryEight": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryNine": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryTen": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryEleven": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      },
-      "countryTwelve": {
-        "Indicator 1": 3938,
-        "Indicator 2": 3938,
-        "Indicator 3": 3938,
-        "Indicator 4": 3938,
-        "Indicator 5": 3938,
-        "Indicator 6": 3938,
-        "Indicator 7": 3938,
-        "Indicator 8": 3938,
-        "Indicator 9": 3938,
-        "Indicator 10": 3938,
-        "Indicator 11": 3938,
-        "Indicator 12": 3938
-      }  
+  "name": "flare",
+  "children": [
+    {
+      "name": "country",
+      "children": [
+        {
+          "name": "countryOne",
+          "children":[
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryTwo",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryThree",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryFour",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryFive",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countrySix",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countrySeven",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryEight",
+          "children":[
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryNine",
+          "children":[
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryTen",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryEleven",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        },
+        {
+          "name": "countryTwelve",
+          "children": [
+            {"name": "Indicator 1", "size": 3938},
+            {"name": "Indicator 2", "size": 3938},
+            {"name": "Indicator 3", "size": 3938},
+            {"name": "Indicator 4", "size": 3938},
+            {"name": "Indicator 5", "size": 3938},
+            {"name": "Indicator 6", "size": 3938},
+            {"name": "Indicator 7", "size": 3938},
+            {"name": "Indicator 8", "size": 3938},
+            {"name": "Indicator 9", "size": 3938},
+            {"name": "Indicator 10", "size": 3938},
+            {"name": "Indicator 11", "size": 3938},
+            {"name": "Indicator 12", "size": 3938}
+          ]
+        }
+      ]
     },
-    "Economic, Social and Cultural Rights": {
-      "Easing": 17010,
-      "FunctionSequence": 5842,
-      "interpolate": {
-        "ArrayInterpolator": 1983,
-        "ColorInterpolator": 2047,
-        "DateInterpolator": 1375,
-        "Interpolator": 8746,
-        "MatrixInterpolator": 2202,
-        "NumberInterpolator": 1382,
-        "ObjectInterpolator": 1629,
-        "PointInterpolator": 1675,
-        "RectangleInterpolator": 2042
-      },
-      "ISchedulable": 1041,
-      "Parallel": 5176,
-      "Pause": 449,
-      "Scheduler": 5593,
-      "Sequence": 5534,
-      "Transition": 9201,
-      "Transitioner": 19975,
-      "TransitionEvent": 1116,
-      "Tween": 6006
+    {
+      "name": "Economic, Social and Cultural Rights",
+      "children": [
+        {
+          "name": "Indicator 1",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "countryThree", "size": 1000},
+            {"name": "countryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 2",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "countryThree", "size": 1000},
+            {"name": "countryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 3",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "countryThree", "size": 1000},
+            {"name": "countryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 4",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "countryThree", "size": 1000},
+            {"name": "countryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 5",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "countryThree", "size": 1000},
+            {"name": "countryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 6",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "countryThree", "size": 1000},
+            {"name": "countryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 7",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "countryThree", "size": 1000},
+            {"name": "countryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        }
+      ]
     },
-    "Civil and Political Rights": {
-      "converters": {
-        "Converters": 721,
-        "DelimitedTextConverter": 4294,
-        "GraphMLConverter": 9800,
-        "IDataConverter": 1314,
-        "JSONConverter": 2220
-      },
-      "DataField": 1759,
-      "DataSchema": 2165,
-      "DataSet": 586,
-      "DataSource": 3331,
-      "DataTable": 772,
-      "DataUtil": 3322
-    },
-  }
+    {
+      "name": "Civil and Political Rights",
+      "children": [
+        {
+          "name": "Indicator 8",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "CountryThree", "size": 1000},
+            {"name": "CountryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 9",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "CountryThree", "size": 1000},
+            {"name": "CountryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 10",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "CountryThree", "size": 1000},
+            {"name": "CountryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 11",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "CountryThree", "size": 1000},
+            {"name": "CountryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        },
+        {
+          "name": "Indicator 12",
+          "children": [
+            {"name": "CountryOne", "size": 1000},
+            {"name": "CountryTwo", "size": 1000},
+            {"name": "CountryThree", "size": 1000},
+            {"name": "CountryFour", "size": 1000},
+            {"name": "CountryFive", "size": 1000},
+            {"name": "CountrySix", "size": 1000},
+            {"name": "CountrySeven", "size": 1000},
+            {"name": "CountryEight", "size": 1000},
+            {"name": "CountryNine", "size": 1000},
+            {"name": "CountryTen", "size": 1000},
+            {"name": "CountryEleven", "size": 1000},
+            {"name": "CountryTwelve", "size": 1000}
+          ]
+        }
+      ]
+    }
+  ]
 }
