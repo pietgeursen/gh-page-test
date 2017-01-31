@@ -1,7 +1,7 @@
 
-# gh-page-test
-
-[View the deployed app here](https://katiewright26.github.io/gh-page-test/)
+# Human Rights Measurement Initiative
+## Data Visualisation
+<!-- [View the deployed app here](https://katiewright26.github.io/gh-page-test/) -->
 
 ## how
 
@@ -9,7 +9,7 @@
 
 ```
 git clone https://github.com/katiewright26/gh-page-test
-cd 
+cd
 npm install
 ```
 
