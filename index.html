@@ -3,34 +3,28 @@
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="favicon.ico?"/>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-
-
-    <style>
-      path {
-        stroke: #bbb;
-      }
-    </style>
   </head>
   <body>
-    <!-- <script src="box.js"></script> -->
     <script src="bundle.js" type="text/javascript"></script>
     <script>
     var margin = {top: 20, right: 20, bottom: 70, left: 40};
     var width = 600 - margin.left - margin.right;
     var height = 300 - margin.top - margin.bottom;
+
     // set the ranges
-    var x = d3.scaleLinear(100);
+    var x = d3.scaleBand().range([width, 0]);
     var y = d3.scaleLinear().range([height, 0]);
+
     // define the axis
     var xAxis = d3.axisBottom(x);
-    var yAxis = d3.axisLeft(y).tickArguments([10]);
-    // add the SVG element
+    var yAxis = d3.axisLeft(y);
+
+    // add the SVG element, sets location of graph
     var svg = d3.select("body").append("svg")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
-      .attr("transform",
-            "translate(" + margin.left + "," + margin.top + ")");
+      .attr("transform","translate(" + margin.left + "," + margin.top + ")");
 
     // load the data
     d3.json("bar.json", function(error, data) {
@@ -46,8 +40,8 @@
       console.log(countries)
 
     // scale the range of the data
-    x.domain(countries.map(function(d) { return d.name; }));
-    y.domain([0, d3.max(data, function(d) { return d.size; })]);
+    x.domain(countries.map(function(d) {return d[0]; }));
+    y.domain([0, 100]);
     // add axis
     svg.append("g")
         .attr("class", "x axis")
@@ -72,12 +66,16 @@
     var xScale = d3.scaleBand()
       .domain(d3.range(0, countries.length))
       .range([0, width])
+
+
     // Add bar chart
     svg.selectAll("bar")
         .data(data)
       .enter().append("rect")
         .attr("class", "bar")
-        .attr("x", function(d) { return x(d.name); })
+        .attr("x", function(d) {
+          console.log(d)
+          return x(d.name); })
         .attr("width", xScale.bandwidth())
         .attr("y", function(d) { return y(d.frequency); })
         .attr("height", function(d) { return height - y(d.frequency); });
