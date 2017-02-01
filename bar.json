@@ -90,8 +90,10 @@
                 { "name": "Median Range", "size": 50 },
                 { "name": "Second Quartile", "size": 25 },
                 { "name" : "Third Quartile", "size": 75 }
-                ]
-              },
+              ]
+            }
+          ]
+        },
         {
           "name": "Pink",
           "children": [
