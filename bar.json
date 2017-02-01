@@ -24,8 +24,10 @@
                 { "name": "Median Range", "size": 50 },
                 { "name": "Second Quartile", "size": 25 },
                 { "name" : "Third Quartile", "size": 75 }
-                ]
-              },
+              ]
+            }
+          ]
+        },
         {
           "name": "Blue",
           "children": [
@@ -46,8 +48,10 @@
                 { "name": "Median Range", "size": 50 },
                 { "name": "Second Quartile", "size": 25 },
                 { "name" : "Third Quartile", "size": 75 }
-                ]
-              },
+              ]
+            }
+          ]
+        },
         {
           "name": "Green",
           "children": [
@@ -68,8 +72,10 @@
                 { "name": "Median Range", "size": 50 },
                 { "name": "Second Quartile", "size": 25 },
                 { "name" : "Third Quartile", "size": 75 }
-                ]
-              },
+              ]
+            }
+          ]
+        },
         {
           "name": "Yellow",
           "children": [
@@ -114,8 +120,10 @@
                 { "name": "Median Range", "size": 50 },
                 { "name": "Second Quartile", "size": 25 },
                 { "name" : "Third Quartile", "size": 75 }
-                ]
-              },
+              ]
+            }
+          ]
+        },
         {
           "name": "Black",
           "children": [
@@ -136,8 +144,10 @@
                 { "name": "Median Range", "size": 50 },
                 { "name": "Second Quartile", "size": 25 },
                 { "name" : "Third Quartile", "size": 75 }
-                ]
-              },
+              ]
+            }
+          ]
+        },
         {
           "name": "Purple",
           "children": [
@@ -158,8 +168,10 @@
                 { "name": "Median Range", "size": 50 },
                 { "name": "Second Quartile", "size": 25 },
                 { "name" : "Third Quartile", "size": 75 }
-                ]
-              },
+              ]
+            }
+          ]
+        },
         {
           "name": "Orange",
           "children": [
@@ -180,8 +192,10 @@
                 { "name": "Median Range", "size": 50 },
                 { "name": "Second Quartile", "size": 25 },
                 { "name" : "Third Quartile", "size": 75 }
-                ]
-              },
+              ]
+            }
+          ]
+        },
         {
           "name": "Brown",
           "children": [
