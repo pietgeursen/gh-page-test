@@ -7,7 +7,7 @@
 
     <style>
       path {
-        stroke: #fff;
+        stroke: #bbb;
       }
     </style>
   </head>
@@ -19,7 +19,7 @@
     var width = 600 - margin.left - margin.right;
     var height = 300 - margin.top - margin.bottom;
     // set the ranges
-    var x = d3.scaleBand([0, width], .05);
+    var x = d3.scaleLinear(100);
     var y = d3.scaleLinear().range([height, 0]);
     // define the axis
     var xAxis = d3.axisBottom(x);
@@ -34,12 +34,20 @@
 
     // load the data
     d3.json("bar.json", function(error, data) {
-      // console.log(data.firstChild)
-      // data.children.forEach(function(d) {
-      // });
+      var countries = []
+      data.country.forEach(function(d) {
+        var country = []
+        var name = d.name
+        var perp = d.perpitrators[0]
+        var perp2 = d.perpitrators[1]
+        country.push(name, perp, perp2)
+        countries.push(country)
+      });
+      console.log(countries)
+
     // scale the range of the data
-    x.domain(data.map(function(d) { return d.Letter; }));
-    y.domain([0, d3.max(data, function(d) { return d.Freq; })]);
+    x.domain(countries.map(function(d) { return d.name; }));
+    y.domain([0, d3.max(data, function(d) { return d.size; })]);
     // add axis
     svg.append("g")
         .attr("class", "x axis")
@@ -61,16 +69,18 @@
         .style("text-anchor", "end")
         .text("Frequency");
 
-
+    var xScale = d3.scaleBand()
+      .domain(d3.range(0, countries.length))
+      .range([0, width])
     // Add bar chart
     svg.selectAll("bar")
         .data(data)
       .enter().append("rect")
         .attr("class", "bar")
-        .attr("x", function(d) { return x(d.Letter); })
-        .attr("width", x.rangeBand())
-        .attr("y", function(d) { return y(d.Freq); })
-        .attr("height", function(d) { return height - y(d.Freq); });
+        .attr("x", function(d) { return x(d.name); })
+        .attr("width", xScale.bandwidth())
+        .attr("y", function(d) { return y(d.frequency); })
+        .attr("height", function(d) { return height - y(d.frequency); });
       })
   </script>
   </body>

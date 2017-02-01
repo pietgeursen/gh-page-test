@@ -1,224 +1,114 @@
 {
   "name": "bar",
-  "children": [
+   "country": [
     {
-      "name": "country" ,
-      "children":  [
+      "name": "Red",
+      "perpitrators": [
         {
-          "name": "Red",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+          "name": "Government",
+           "frequency": 15,
+           "distribution": 20
+         },
+        {
+          "name": "Non-Government",
+           "frequency": 23,
+           "distribution": 20
+        }
+      ],
+      "marginOfError": [
+        {
+           "name": "Upper Quartile",
+            "size": 100
         },
         {
-          "name": "Blue",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+           "name": "Lower Quartile",
+            "size": 0
         },
         {
-          "name": "Green",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+           "name": "Median Range",
+            "size": 50
         },
         {
-          "name": "Yellow",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+           "name": "Second Quartile",
+            "size": 25
         },
         {
-          "name": "Pink",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+           "name" : "Third Quartile",
+            "size": 75
+        }
+      ]
+    },
+    {
+      "name": "Blue",
+      "perpitrators": [
+        {
+          "name": "Government",
+           "frequency": 15,
+           "distribution": 20
+         },
+        {
+          "name": "Non-Government",
+           "frequency": 23,
+           "distribution": 20
+        }
+      ],
+      "marginOfError": [
+        {
+           "name": "Upper Quartile",
+            "size": 100
         },
         {
-          "name": "Black",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+           "name": "Lower Quartile",
+            "size": 0
         },
         {
-          "name": "Purple",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+           "name": "Median Range",
+            "size": 50
         },
         {
-          "name": "Orange",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+           "name": "Second Quartile",
+            "size": 25
         },
         {
-          "name": "Brown",
-          "children": [
-            {"name": "Government", "size": 15 },
-            {"name": "Non-Government", "size": 23 },
-            {
-              "name": "distribution",
-              "children": [
-                { "name": "Goverment distribution", "size": 45 },
-                { "name": "Non-Government distribution", "size": 65 }
-              ]
-            },
-            {
-              "name": "marginError",
-              "children": [
-                { "name": "Upper Quartile", "size": 100 },
-                { "name": "Lower Quartile", "size": 0 },
-                { "name": "Median Range", "size": 50 },
-                { "name": "Second Quartile", "size": 25 },
-                { "name" : "Third Quartile", "size": 75 }
-              ]
-            }
-          ]
+           "name" : "Third Quartile",
+            "size": 75
+        }
+      ]
+    },
+    {
+      "name": "Green",
+      "perpitrators": [
+        {
+          "name": "Government",
+           "frequency": 15,
+           "distribution": 20
+         },
+        {
+          "name": "Non-Government",
+           "frequency": 23,
+           "distribution": 20
+        }
+      ],
+      "marginOfError": [
+        {
+           "name": "Upper Quartile",
+            "size": 100
+        },
+        {
+           "name": "Lower Quartile",
+            "size": 0
+        },
+        {
+           "name": "Median Range",
+            "size": 50
+        },
+        {
+           "name": "Second Quartile",
+            "size": 25
+        },
+        {
+           "name" : "Third Quartile",
+            "size": 75
         }
       ]
     }
