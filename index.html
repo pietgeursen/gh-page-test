@@ -36,8 +36,7 @@
     d3.json("bar.json", function(error, data) {
       // console.log(data.firstChild)
       // data.children.forEach(function(d) {
-          console.log(d.name)
-      });
+      // });
     // scale the range of the data
     x.domain(data.map(function(d) { return d.Letter; }));
     y.domain([0, d3.max(data, function(d) { return d.Freq; })]);
@@ -72,6 +71,7 @@
         .attr("width", x.rangeBand())
         .attr("y", function(d) { return y(d.Freq); })
         .attr("height", function(d) { return height - y(d.Freq); });
+      })
   </script>
   </body>
   <footer>
