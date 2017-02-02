@@ -29,7 +29,10 @@ window.onload=function(){
     }, function(error, data) {
       if (error) throw error;
       var name = "";
-      var keys = data.columns.slice(1, 3);
+      var keys = null;
+      document.getElementById("frequency").addEventListener("click", getFrequency())
+      document.getElementById("margin").addEventListener("click", getMargin())
+      document.getElementById("distribution").addEventListener("click", getDistribution())
 
       function getFrequency() {
         keys = data.columns.slice(1, 3);
