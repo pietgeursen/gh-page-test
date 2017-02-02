@@ -22,7 +22,6 @@ window.onload=function(){
       .range(["#98abc5", "#8a89a6"]);
 
   // load the data
-  function d3() {
     d3.csv("bar.csv", function(d, i, columns) {
     for (var i = 1, n = columns.length; i < n; ++i)
       d[columns[i]] = +d[columns[i]];
@@ -30,16 +29,20 @@ window.onload=function(){
     }, function(error, data) {
       if (error) throw error;
       var name = "";
-        if (document.getElementById("frequency").checked) {
-          var keys = data.columns.slice(1, 3);
-          name = "Frequency"
-        } else if (document.getElementById("distribution").checked) {
-          var keys = data.columns.slice(3);
-          name = "Distribution"
-        } else if (document.getElementById("margin").checked) {
-          var keys = data.columns.slice(5);
-          name = "Margin of Error"
-        }
+      var keys = data.columns.slice(1, 3);
+
+      function getFrequency() {
+        keys = data.columns.slice(1, 3);
+        name = "Frequency"
+      }
+      function getDistribution() {
+        keys = data.columns.slice(3);
+        name = "Distribution"
+      }
+      function getMargin() {
+        keys = data.columns.slice(5);
+        name = "Margin of Error"
+      }
         x0.domain(data.map(function(d) { return d.name; }));
         x1.domain(keys).rangeRound([0, x0.bandwidth()]);
         y.domain([0, d3.max(data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
@@ -152,7 +155,6 @@ window.onload=function(){
 //   }
 //
 //   d3.select(self.frameElement).style("height", height + "px");
-}
 }
 
 console.log('welcome to gh-page-test')
