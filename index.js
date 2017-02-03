@@ -27,14 +27,14 @@ window.onload=function(){
     return d;
   }, function(error, data) {
     if (error) throw error;
-    var name = "";
+    var name = "Frequency";
     var keys = data.columns.slice(1, 3);
-
+    console.log(keys)
     document.querySelector("#frequency").onchange = getFrequency
     document.querySelector("#distribution").onchange = getDistribution
-    document.querySelector("#margin").onchange = getMargin
+    // document.querySelector("#margin").onchange = getMargin
 
-    renderGraph(name, keys, data)
+    renderGraph(name, keys, data);
 
     function renderGraph(name, keys, data) {
       x0.domain(data.map(function(d) { return d.name; }));
@@ -96,9 +96,11 @@ window.onload=function(){
         .text(function(d) { return d; });
 
     }
+
     function getFrequency() {
-      var keys = data.columns.slice(1, 3);
+      var keys = data.columns.slice(1,3);
       var name = "Frequency"
+      console.log("render graph ", keys, data)
       renderGraph(name, keys, data)
     }
     function getDistribution() {

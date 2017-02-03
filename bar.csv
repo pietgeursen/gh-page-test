@@ -1,13 +1,13 @@
-name, Government, Non-Government, Government, Non-Government
+name, Government, Non-Government, Distribution for Government, Distribution for Non-Government
 NZ,15,23,28,64
-Australia,22,39,11,64
-Soloman Isl,58,10,28,12
-New Caledonia,15,23,44,64
+Australia,22,39,28,64
+Soloman Isl,58,10,28,64
+New Caledonia,15,23,28,64
 Fiji,22,89,28,64
 Singapore,4,10,28,33
 Samoa,15,67,28,64
 Tonga,71,30,55,64
 Taiwan,1,10,28,64
-Micronesia,15,23,28,88
+Micronesia,15,23,28,64
 Malaysia,14,48,28,64
-Papua New Guinea,54,10,99,64
+Papua New Guinea,54,10,28,64
