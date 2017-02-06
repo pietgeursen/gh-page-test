@@ -5,12 +5,6 @@
 
 ## how
 
-### install
-
-```
-git clone https://github.com/katiewright26/gh-page-test
-cd 
-npm install
 ```
 
 ## develop
