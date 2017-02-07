@@ -1,0 +1,42 @@
+{
+  "name": "flare",
+  "children": [
+    {
+      "name": "country",
+      "children": [
+        { "name": "NZ", "size": 3938 },
+        { "name": "Aust", "size": 3938 },
+        { "name": "USA", "size": 3938 },
+        { "name": "UK", "size": 3938 },
+        { "name": "Fiji", "size": 3938 },
+        { "name": "Iran", "size": 3938 },
+        { "name": "Somalia", "size": 3938 },
+        { "name": "Uzebekistan", "size": 3938 },
+        { "name": "France", "size": 3938 },
+        { "name": "Beirut", "size": 3938 }
+      ]
+    },
+    {
+      "name": "Economic, Social and Cultural Rights",
+      "children": [
+        { "name": "Indicator 1", "size": 3938 },
+        { "name": "Indicator 2", "size": 3938 },
+        { "name": "Indicator 3", "size": 3938 },
+        { "name": "Indicator 4", "size": 3938 },
+        { "name": "Indicator 5", "size": 3938 },
+        { "name": "Indicator 6", "size": 3938 },
+        { "name": "Indicator 7", "size": 3938 }
+      ]
+    },
+    {
+      "name": "Civil and Political Rights",
+      "children": [
+        { "name": "Indicator 8", "size": 3938 },
+        { "name": "Indicator 9", "size": 3938 },
+        { "name": "Indicator 10", "size": 3938 },
+        { "name": "Indicator 11", "size": 3938 },
+        { "name": "Indicator 12", "size": 3938 }
+      ]
+    }
+  ]
+}

@@ -1,77 +1,120 @@
-var c3 = require('c3')
 var d3 = require('d3')
 
 
-
 window.onload=function(){
-  var url = 'https://katiewright26.gitbooks.io/test-book/content/country'
-  var arrayOfLinks = [
-    url + '-1.html',
-    url + '-2.html',
-    url + '-3.html',
-    url + '-4.html',
-    url + '-5.html',
-    url + '-6.html',
-    url + '-7.html',
-    url + '-8.html',
-    url + '-9.html',
-    url + '-10.html',
-    url + '-11.html',
-    url + '-12.html'
-    ]
+  var svg = d3.select("svg");
+  var margin = {top: 20, right: 20, bottom: 30, left: 40};
+  var width = svg.attr("width") - margin.left - margin.right;
+  var height = svg.attr("height") - margin.top - margin.bottom;
 
+  var x0 = d3.scaleBand()
+    .rangeRound([0, width])
+    .paddingInner(0.1);
 
-  var chart = c3.generate({
-    data: {
-      columns: [
-        ['govt', 0.3, 0.35, 0.3, 0.8, 0.1, 0.5, 0.75, 0.64, 0.1, 0.15, 0.9, 0.66],
-        ['ngovt', 0.39, 0.3, 0.8, 0.2, 0.75, 0.5, 0.7, 0.45, 0.27, 0.4, 0.8, 0.32],
-        ['dist', 1, 3, 5, 5, 3, 2, 2, 4, 5, 1, 1, 0]
-      ],
-      types: {
-        govt: 'bar',
-        ngovt: 'bar'
-      },
-      axes: {
-        dist: 'y2'
-      }
-    },
-    axis: {
-      y: {
-        padding: {bottom: 0},
-        min: 0,
-        max: 0.9,
-        label: {
-          text: 'Frequency (%)',
-          position: 'outer-middle'
-        },
-        tick: {
-          format: d3.format("%,")
-        }
-      },
-      x: {
-        type: 'category',
-        categories: ['Country 1', 'Country 2', 'Country 3', 'Country 4', 'Country 5', 'Country 6',
-      'Country 7', 'Country 8', 'Country 9', 'Country 10', 'Country 11', 'Country 12'],
-      },
-      y2: {
-        show: true,
-        max: 5,
-        min: 0,
-        label: {
-          text: 'Distribution (high to low)',
-          position: 'outer-middle'
-        }
-      }
+  var x1 = d3.scaleBand()
+    .padding(0.05);
+
+  var y = d3.scaleLinear()
+    .rangeRound([height, 0]);
+
+  var z = d3.scaleOrdinal()
+    .range(["#98abc5", "#8a89a6"]);
+
+  // load the data
+  d3.csv("bar.csv", function(d, i, columns) {
+    for (var i = 1, n = columns.length; i < n; ++i)
+      d[columns[i]] = +d[columns[i]];
+    return d;
+  }, function(error, data) {
+    if (error) throw error;
+    var name = "Frequency";
+    var keys = data.columns.slice(1, 3);
+    console.log(keys)
+    document.querySelector("#frequency").onchange = getFrequency
+    document.querySelector("#distribution").onchange = getDistribution
+    // document.querySelector("#margin").onchange = getMargin
+
+    renderGraph(name, keys, data);
+
+    function renderGraph(name, keys, data) {
+      x0.domain(data.map(function(d) { return d.name; }));
+      x1.domain(keys).rangeRound([0, x0.bandwidth()]);
+      y.domain([0, d3.max(data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
+      svg.selectAll("*").remove()
+      var g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      g.append("g")
+        .selectAll("g")
+        .data(data)
+        .enter().append("g")
+        .attr("transform", function(d) { return "translate(" + x0(d.name) + ",0)"; })
+        .selectAll("rect")
+        .data(function(d) { return keys.map(function(key) { return {key: key, value: d[key]}; }); })
+        .enter().append("rect")
+        .attr("x", function(d) { return x1(d.key); })
+        .attr("y", function(d) {
+          return y(d.value); })
+        .attr("width", x1.bandwidth())
+        .attr("height", function(d) { return height - y(d.value); })
+        .attr("fill", function(d) { return z(d.key); });
+
+      g.append("g")
+        .attr("class", "axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x0));
+
+      g.append("g")
+        .attr("class", "axis")
+        .call(d3.axisLeft(y).ticks(null, "s"))
+        .append("text")
+        .attr("x", 2)
+        .attr("y", y(y.ticks().pop()) + 0.5)
+        .attr("dy", "0.32em")
+        .attr("fill", "#000")
+        .attr("font-weight", "bold")
+        .attr("text-anchor", "start")
+        .text(name);
+
+      var legend = g.append("g")
+        .attr("font-family", "sans-serif")
+        .attr("font-size", 10)
+        .attr("text-anchor", "end")
+        .selectAll("g")
+        .data(keys.slice().reverse())
+        .enter().append("g")
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+      legend.append("rect")
+        .attr("x", width - 19)
+        .attr("width", 19)
+        .attr("height", 19)
+        .attr("fill", z);
+
+      legend.append("text")
+        .attr("x", width - 24)
+        .attr("y", 9.5)
+        .attr("dy", "0.32em")
+        .text(function(d) { return d; });
+
+    }
+
+    function getFrequency() {
+      var keys = data.columns.slice(1,3);
+      var name = "Frequency"
+      console.log("render graph ", keys, data)
+      renderGraph(name, keys, data)
+    }
+    function getDistribution() {
+      var keys = data.columns.slice(3);
+      var name = "Distribution"
+      renderGraph(name, keys, data)
+    }
+    function getMargin() {
+      var keys = data.columns.slice(5);
+      var name = "Margin of Error"
+      renderGraph(name, keys, data)
     }
   });
 
-  d3.selectAll('.c3-axis-x .tick tspan').each(function(d,i) {
-    var self = d3.select(this);
-    console.log(self)
-    var text = self.text();
-    self.html("<a xlink:href='"+arrayOfLinks[i]+"'>"+text+"</a>");
-  })
 }
 
 console.log('welcome to gh-page-test')

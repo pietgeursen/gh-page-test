@@ -1,0 +1,116 @@
+{
+  "name": "bar",
+   "country": [
+    {
+      "name": "Red",
+      "perpitrators": [
+        {
+          "name": "Government",
+           "frequency": 15,
+           "distribution": 20
+         },
+        {
+          "name": "Non-Government",
+           "frequency": 23,
+           "distribution": 20
+        }
+      ],
+      "marginOfError": [
+        {
+           "name": "Upper Quartile",
+            "size": 100
+        },
+        {
+           "name": "Lower Quartile",
+            "size": 0
+        },
+        {
+           "name": "Median Range",
+            "size": 50
+        },
+        {
+           "name": "Second Quartile",
+            "size": 25
+        },
+        {
+           "name" : "Third Quartile",
+            "size": 75
+        }
+      ]
+    },
+    {
+      "name": "Blue",
+      "perpitrators": [
+        {
+          "name": "Government",
+           "frequency": 15,
+           "distribution": 20
+         },
+        {
+          "name": "Non-Government",
+           "frequency": 23,
+           "distribution": 20
+        }
+      ],
+      "marginOfError": [
+        {
+           "name": "Upper Quartile",
+            "size": 100
+        },
+        {
+           "name": "Lower Quartile",
+            "size": 0
+        },
+        {
+           "name": "Median Range",
+            "size": 50
+        },
+        {
+           "name": "Second Quartile",
+            "size": 25
+        },
+        {
+           "name" : "Third Quartile",
+            "size": 75
+        }
+      ]
+    },
+    {
+      "name": "Green",
+      "perpitrators": [
+        {
+          "name": "Government",
+           "frequency": 15,
+           "distribution": 20
+         },
+        {
+          "name": "Non-Government",
+           "frequency": 23,
+           "distribution": 20
+        }
+      ],
+      "marginOfError": [
+        {
+           "name": "Upper Quartile",
+            "size": 100
+        },
+        {
+           "name": "Lower Quartile",
+            "size": 0
+        },
+        {
+           "name": "Median Range",
+            "size": 50
+        },
+        {
+           "name": "Second Quartile",
+            "size": 25
+        },
+        {
+           "name" : "Third Quartile",
+            "size": 75
+        }
+      ]
+    }
+  ]
+}
