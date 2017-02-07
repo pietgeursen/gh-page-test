@@ -1,6 +1,4 @@
-// var d3 = require('d3')
-//
-//
+
 window.onload=function(){
   var labels = true; // show the text labels beside individual boxplots?
 
@@ -10,6 +8,7 @@ window.onload=function(){
 
   var min = Infinity,
       max = -Infinity;
+
 
   // parse in the data
   d3.csv("bar.csv", function(error, csv) {
@@ -35,7 +34,8 @@ window.onload=function(){
         // add more rows if your csv file has more columns
 
     // add here the header of the csv file
-    data[0][0] = "C1";
+
+    data[0][0] = "Katie";
     data[1][0] = "C2";
     data[2][0] = "C3";
     data[3][0] = "C4";
@@ -63,7 +63,7 @@ window.onload=function(){
     data[11][1] = [];
 
     csv.forEach(function(x) {
-      console.log("x ", x)
+      console.log(x)
       var v1 = Math.floor(x.C1),
         v2 = Math.floor(x.C2),
         v3 = Math.floor(x.C3),
@@ -78,10 +78,8 @@ window.onload=function(){
         v12 = Math.floor(x.C12);
         // add more variables if your csv file has more columns
 
-      var rowMax = Math.max(v1, Math.max(v2, Math.max(v3, Math.max(v4, Math.max(v5, v6)))));
-      var rowMin = Math.min(v1, Math.min(v2, Math.min(v3, Math.min(v4, Math.min(v5, v6)))));
-      console.log(rowMin)
-      console.log(rowMax)
+      var rowMax = 5;
+      var rowMin = 1;
 
       data[0][1].push(v1);
       data[1][1].push(v2);
@@ -144,7 +142,6 @@ window.onload=function(){
       .attr("text-anchor", "middle")
       .style("font-size", "18px")
 
-
      // draw y axis
     svg.append("g")
           .attr("class", "y axis")
@@ -179,6 +176,7 @@ window.onload=function(){
           iqr = (q3 - q1) * k,
           i = -1,
           j = d.length;
+
       while (d[++i] < q1 - iqr);
       while (d[--j] > q3 + iqr);
       return [i, j];

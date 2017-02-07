@@ -23,7 +23,6 @@ d3.box = function() {
         n = d.length,
         min = d[0],
         max = d[n - 1];
-        console.log(n)
       // Compute quartiles. Must return exactly 3 elements.
       var quartileData = d.quartiles = quartiles(d);
 
@@ -45,7 +44,6 @@ d3.box = function() {
       // Retrieve the old x-scale, if this is an update.
       var x0 = this.__chart__ || d3.scaleLinear()
         .domain([0, Infinity])
-		 // .domain([0, max])
         .range(x1.range());
 
       // Stash the new scale.
@@ -74,19 +72,6 @@ d3.box = function() {
           .attr("y1", function(d) { return x1(d[0]); })
           .attr("y2", function(d) { return x1(d[1]); });
 
-      center.transition()
-        .duration(duration)
-        .style("opacity", 1)
-        .attr("y1", function(d) { return x1(d[0]); })
-        .attr("y2", function(d) { return x1(d[1]); });
-
-      center.exit().transition()
-        .duration(duration)
-        .style("opacity", 1e-6)
-        .attr("y1", function(d) { return x1(d[0]); })
-        .attr("y2", function(d) { return x1(d[1]); })
-        .remove();
-
       // Update innerquartile box.
       var box = g.selectAll("rect.box")
         .data([quartileData]);
@@ -102,11 +87,6 @@ d3.box = function() {
           .attr("y", function(d) { return x1(d[2]); })
           .attr("height", function(d) { return x1(d[0]) - x1(d[2]); });
 
-      box.transition()
-        .duration(duration)
-        .attr("y", function(d) { return x1(d[2]); })
-        .attr("height", function(d) { return x1(d[0]) - x1(d[2]); });
-
       // Update median line.
       var medianLine = g.selectAll("line.median")
         .data([quartileData[1]]);
@@ -121,11 +101,6 @@ d3.box = function() {
           .duration(duration)
           .attr("y1", x1)
           .attr("y2", x1);
-
-      medianLine.transition()
-        .duration(duration)
-        .attr("y1", x1)
-        .attr("y2", x1);
 
       // Update whiskers.
       var whisker = g.selectAll("line.whisker")
@@ -144,19 +119,6 @@ d3.box = function() {
           .attr("y2", x1)
           .style("opacity", 1);
 
-      whisker.transition()
-        .duration(duration)
-        .attr("y1", x1)
-        .attr("y2", x1)
-        .style("opacity", 1);
-
-      whisker.exit().transition()
-        .duration(duration)
-        .attr("y1", x1)
-        .attr("y2", x1)
-        .style("opacity", 1e-6)
-        .remove();
-
       // Update outliers.
       var outlier = g.selectAll("circle.outlier")
         .data(outlierIndices, Number);
@@ -172,75 +134,52 @@ d3.box = function() {
           .attr("cy", function(i) { return x1(d[i]); })
           .style("opacity", 1);
 
-      outlier.transition()
-        .duration(duration)
-        .attr("cy", function(i) { return x1(d[i]); })
-        .style("opacity", 1);
-
-      outlier.exit().transition()
-        .duration(duration)
-        .attr("cy", function(i) { return x1(d[i]); })
-        .style("opacity", 1e-6)
-        .remove();
-
       // Compute the tick format.
       var format = tickFormat || x1.tickFormat(8);
-
       // Update box ticks.
       var boxTick = g.selectAll("text.box")
         .data(quartileData);
 
 	 if(showLabels == true) {
       boxTick.enter().append("text")
-          .attr("class", "box")
-          .attr("dy", ".3em")
-          .attr("dx", function(d, i) { return i & 1 ? 6 : -6 })
-          .attr("x", function(d, i) { return i & 1 ?  + width : 0 })
-          .attr("y", x0)
-          .attr("text-anchor", function(d, i) { return i & 1 ? "start" : "end"; })
-          .text(format)
+        .attr("class", "box")
+        .attr("dy", ".3em")
+        .attr("dx", function(d, i) { return i & 1 ? 6 : -6 })
+        .attr("x", function(d, i) { return i & 1 ?  + width : 0 })
+        .attr("y", x0)
+        .attr("text-anchor", function(d, i) { return i & 1 ? "start" : "end"; })
+        .text(format)
         .transition()
-          .duration(duration)
-          .attr("y", x1);
-	}
+        .duration(duration)
+        .attr("y", x1);
+	  }
 
-      boxTick.transition()
-          .duration(duration)
-          .text(format)
-          .attr("y", x1);
+    boxTick.transition()
+      .duration(duration)
+      .text(format)
+      .attr("y", x1);
 
       // Update whisker ticks. These are handled separately from the box
       // ticks because they may or may not exist, and we want don't want
       // to join box ticks pre-transition with whisker ticks post-.
       var whiskerTick = g.selectAll("text.whisker")
           .data(whiskerData || []);
-	if(showLabels == true) {
+
+	  if(showLabels == true) {
       whiskerTick.enter().append("text")
-          .attr("class", "whisker")
-          .attr("dy", ".3em")
-          .attr("dx", 6)
-          .attr("x", width)
-          .attr("y", x0)
-          .text(format)
-          .style("opacity", 1e-6)
+        .attr("class", "whisker")
+        .attr("dy", ".3em")
+        .attr("dx", 6)
+        .attr("x", width)
+        .attr("y", x0)
+        .text(format)
+        .style("opacity", 1e-6)
         .transition()
           .duration(duration)
           .attr("y", x1)
           .style("opacity", 1);
-	}
-      whiskerTick.transition()
-          .duration(duration)
-          .text(format)
-          .attr("y", x1)
-          .style("opacity", 1);
-
-      whiskerTick.exit().transition()
-          .duration(duration)
-          .attr("y", x1)
-          .style("opacity", 1e-6)
-          .remove();
+	    }
     });
-    d3.timerFlush();
   }
 
   box.width = function(x) {
@@ -258,12 +197,6 @@ d3.box = function() {
   box.tickFormat = function(x) {
     if (!arguments.length) return tickFormat;
     tickFormat = x;
-    return box;
-  };
-
-  box.duration = function(x) {
-    if (!arguments.length) return duration;
-    duration = x;
     return box;
   };
 
