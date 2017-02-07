@@ -2,20 +2,85 @@
   <head>
     <link href="index.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/png" href="favicon.ico?"/>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+
   </head>
   <body>
     <script src="bundle.js" type="text/javascript"></script>
-    <div><h1>Indicator name</h1></div>
-    <svg width="960" height="500"></svg>
-    <input type="radio" name="radio" value="frequency" id="frequency" checked>Frequency of occurence</input>
-    <input type="radio" name="radio" value="distribution" id="distribution">Distribution</input>
-    <input type="radio" name="radio" value="margin" id="margin" disabled>Margin of error</input>
-    <div>
-      <a href="" target="_blank"><p>View full report</p></a>
-    </div>
-  </body>
-  <footer>
+    <h2>Chart Title: Indicator 1</h2>
+    <script src="box.js" type="text/javascript"></script>
+    <script>
+
+      var margin = {top: 10, right: 50, bottom: 20, left: 50},
+          width = 120 - margin.left - margin.right,
+          height = 500 - margin.top - margin.bottom;
+
+      var min = Infinity,
+          max = -Infinity;
+
+      var chart = d3.box()
+        .whiskers(iqr(1.5))
+        .width(width)
+        .height(height);
+
+      d3.csv("bar.csv", function(error, csv) {
+        if (error) throw error;
+
+        var data = [];
+
+        csv.forEach(function(x) {
+          var e = Math.floor(x.Expt - 1),
+              r = Math.floor(x.Run - 1),
+              s = Math.floor(x.Speed),
+              d = data[e];
+          if (!d) d = data[e] = [s];
+          else d.push(s);
+          if (s > max) max = s;
+          if (s < min) min = s;
+        });
+
+        chart.domain([min, max]);
+
+        var svg = d3.select("body").selectAll("svg")
+            .data(data)
+          .enter().append("svg")
+            .attr("class", "box")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.bottom + margin.top)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+            .call(chart);
+
+        setInterval(function() {
+          svg.datum(randomize).call(chart.duration(1000));
+        }, 2000);
+      });
+
+      function randomize(d) {
+        if (!d.randomizer) d.randomizer = randomizer(d);
+        return d.map(d.randomizer);
+      }
+
+      function randomizer(d) {
+        var k = d3.max(d) * .02;
+        return function(d) {
+          return Math.max(min, Math.min(max, d + k * (Math.random() - .5)));
+        };
+      }
+
+      // Returns a function to compute the interquartile range.
+      function iqr(k) {
+        return function(d, i) {
+          var q1 = d.quartiles[0],
+              q3 = d.quartiles[2],
+              iqr = (q3 - q1) * k,
+              i = -1,
+              j = d.length;
+          while (d[++i] < q1 - iqr);
+          while (d[--j] > q3 + iqr);
+          return [i, j];
+        };
+      }
+    </script>
     <div class="menu">
       <ul>
         <li><a href='index.html'>Home</a></li>
@@ -27,5 +92,8 @@
         <li><a href='about.html'>Using Human Rights data</a></li>
       </ul>
     </div>
-    </footer>
+  </body>
+  <footer>
+    <h4>Footer content</h4>
+  </footer>
 </html>
