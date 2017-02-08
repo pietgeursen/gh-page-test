@@ -31,11 +31,24 @@ window.onload=function(){
     data[9] = [];
     data[10] = [];
     data[11] = [];
-        // add more rows if your csv file has more columns
+
+    var data1 = [];
+    data1[0] = [];
+    data1[1] = [];
+    data1[2] = [];
+    data1[3] = [];
+    data1[4] = [];
+    data1[5] = [];
+    data1[6] = [];
+    data1[7] = [];
+    data1[8] = [];
+    data1[9] = [];
+    data1[10] = [];
+    data1[11] = [];        // add more rows if your csv file has more columns
 
     // add here the header of the csv file
 
-    data[0][0] = "Katie";
+    data[0][0] = "C1";
     data[1][0] = "C2";
     data[2][0] = "C3";
     data[3][0] = "C4";
@@ -62,20 +75,33 @@ window.onload=function(){
     data[10][1] = [];
     data[11][1] = [];
 
+    data1[0][1] = [];
+    data1[1][1] = [];
+    data1[2][1] = [];
+    data1[3][1] = [];
+    data1[4][1] = [];
+    data1[5][1] = [];
+    data1[6][1] = [];
+    data1[7][1] = [];
+    data1[8][1] = [];
+    data1[9][1] = [];
+    data1[10][1] = [];
+    data1[11][1] = [];
+
     csv.forEach(function(x) {
-      console.log(x)
-      var v1 = Math.floor(x.C1),
-        v2 = Math.floor(x.C2),
-        v3 = Math.floor(x.C3),
-        v4 = Math.floor(x.C4);
-        v5 = Math.floor(x.C5),
-        v6 = Math.floor(x.C6),
-        v7 = Math.floor(x.C7);
-        v8 = Math.floor(x.C8),
-        v9 = Math.floor(x.C9),
-        v10 = Math.floor(x.C10),
-        v11 = Math.floor(x.C11),
-        v12 = Math.floor(x.C12);
+      var v1 = Math.floor(x.C1G),
+        v2 = Math.floor(x.C2G),
+        v3 = Math.floor(x.C3G),
+        v4 = Math.floor(x.C4G);
+        v5 = Math.floor(x.C5G),
+        v6 = Math.floor(x.C6G),
+        v7 = Math.floor(x.C7G);
+        v8 = Math.floor(x.C8G),
+        v9 = Math.floor(x.C9G),
+        v10 = Math.floor(x.C10G),
+        v11 = Math.floor(x.C11G),
+        v12 = Math.floor(x.C12G),
+        v13 = Math.floor(x.C1NG);
         // add more variables if your csv file has more columns
 
       var rowMax = 5;
@@ -93,6 +119,8 @@ window.onload=function(){
       data[9][1].push(v10);
       data[10][1].push(v11);
       data[11][1].push(v12);
+      data1[0][1].push(v13);
+
        // add more rows if your csv file has more columns
 
       if (rowMax > max) max = rowMax;
@@ -133,7 +161,6 @@ window.onload=function(){
       .enter().append("g")
       .attr("transform", function(d) { return "translate(" +  x(d[0])  + "," + margin.top + ")"; } )
         .call(chart.width(x.bandwidth() - 40));
-
 
     // add a title
     svg.append("text")
