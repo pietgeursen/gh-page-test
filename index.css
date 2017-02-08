@@ -12,9 +12,9 @@ body {
 }
 
 .box line,
-.box rect,
+/*.box rect, turned off as hard to distinguish median if now lower/upper quartile*/
 .box circle {
-  fill: #fff;
+  /*fill: #fff;*/
   stroke: #000;
   stroke-width: 1.5px;
 }
@@ -27,7 +27,12 @@ body {
   fill: none;
   stroke: #ccc;
 }
-
+.government .box {
+  fill: orange;
+}
+.non-government .box {
+  fill: purple;
+}
 li {
   list-style: none;
   display: block;
