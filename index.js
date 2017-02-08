@@ -1,6 +1,6 @@
 
 window.onload=function(){
-  var labels = true; // show the text labels beside individual boxplots?
+  var labels = false; // show the text labels beside individual boxplots?
 
   var margin = {top: 30, right: 50, bottom: 70, left: 50};
   var width = 800 - margin.left - margin.right;
@@ -8,7 +8,6 @@ window.onload=function(){
 
   var min = Infinity,
       max = -Infinity;
-
 
   // parse in the data
   d3.csv("bar.csv", function(error, csv) {
@@ -130,7 +129,7 @@ window.onload=function(){
         // add more variables if your csv file has more columns
 
       var rowMax = 5;
-      var rowMin = 1;
+      var rowMin = 0;
 
       data[0][1].push(v1);
       data[1][1].push(v2);
@@ -195,16 +194,18 @@ window.onload=function(){
     svg.selectAll(".government.box")
         .data(data)
       .enter().append("g")
+      .attr("class", "government")
       .attr("transform", function(d) {
-        return "translate(" +  x(d[0])  + "," + margin.top + ")"; } )
-        .call(chart.width(x.bandwidth() - 40));
+        return "translate(" +  (x(d[0]) + 20)  + "," + margin.top + ")"; } )
+        .call(chart.width(x.bandwidth() - 45));
 
   svg.selectAll(".non-government.box")
       .data(data1)
     .enter().append("g")
+    .attr("class", "non-government")
     .attr("transform", function(d) {
-      return "translate(" +  (x(d[0]) + 25)  + "," + margin.top + ")"; } )
-      .call(chart.width(x.bandwidth() - 40));
+      return "translate(" +  (x(d[0]) + 35)  + "," + margin.top + ")"; } )
+      .call(chart.width(x.bandwidth() - 45));
 
     // add a title
     svg.append("text")
