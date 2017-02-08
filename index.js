@@ -60,6 +60,19 @@ window.onload=function(){
     data[9][0] = "C10";
     data[10][0] = "C11";
     data[11][0] = "C12";
+
+    data1[0][0] = "C1";
+    data1[1][0] = "C2";
+    data1[2][0] = "C3";
+    data1[3][0] = "C4";
+    data1[4][0] = "C5";
+    data1[5][0] = "C6";
+    data1[6][0] = "C7";
+    data1[7][0] = "C8";
+    data1[8][0] = "C9";
+    data1[9][0] = "C10";
+    data1[10][0] = "C11";
+    data1[11][0] = "C12";
     // add more rows if your csv file has more columns
 
     data[0][1] = [];
@@ -101,7 +114,19 @@ window.onload=function(){
         v10 = Math.floor(x.C10G),
         v11 = Math.floor(x.C11G),
         v12 = Math.floor(x.C12G),
-        v13 = Math.floor(x.C1NG);
+        v13 = Math.floor(x.C1NG),
+        v14 = Math.floor(x.C2NG),
+        v15 = Math.floor(x.C3NG),
+        v16 = Math.floor(x.C4NG),
+        v17 = Math.floor(x.C5NG),
+        v18 = Math.floor(x.C6NG),
+        v19 = Math.floor(x.C7NG),
+        v20 = Math.floor(x.C8NG),
+        v21 = Math.floor(x.C9NG),
+        v22 = Math.floor(x.C10NG),
+        v23 = Math.floor(x.C11NG),
+        v24 = Math.floor(x.C12NG);
+
         // add more variables if your csv file has more columns
 
       var rowMax = 5;
@@ -120,6 +145,17 @@ window.onload=function(){
       data[10][1].push(v11);
       data[11][1].push(v12);
       data1[0][1].push(v13);
+      data1[1][1].push(v14);
+      data1[2][1].push(v15);
+      data1[3][1].push(v16);
+      data1[4][1].push(v17);
+      data1[5][1].push(v18);
+      data1[6][1].push(v19);
+      data1[7][1].push(v20);
+      data1[8][1].push(v21);
+      data1[9][1].push(v22);
+      data1[10][1].push(v23);
+      data1[11][1].push(v24);
 
        // add more rows if your csv file has more columns
 
@@ -156,11 +192,19 @@ window.onload=function(){
       .scale(y)
 
     // draw the boxplots
-    svg.selectAll(".box")
+    svg.selectAll(".government.box")
         .data(data)
       .enter().append("g")
-      .attr("transform", function(d) { return "translate(" +  x(d[0])  + "," + margin.top + ")"; } )
+      .attr("transform", function(d) {
+        return "translate(" +  x(d[0])  + "," + margin.top + ")"; } )
         .call(chart.width(x.bandwidth() - 40));
+
+  svg.selectAll(".non-government.box")
+      .data(data1)
+    .enter().append("g")
+    .attr("transform", function(d) {
+      return "translate(" +  (x(d[0]) + 25)  + "," + margin.top + ")"; } )
+      .call(chart.width(x.bandwidth() - 40));
 
     // add a title
     svg.append("text")
