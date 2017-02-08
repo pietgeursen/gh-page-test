@@ -3,12 +3,14 @@ body {
   font-size: 12px;
   font-weight: 400;
   background-color: #fff;
-  width: 960px;
-  height: 700px;
-  margin-top: 10px;
+  width: 90%;
+  height: 100%;
+  margin: 20px auto;
 }
 .box {
   font: 10px sans-serif;
+  position: relative;
+  float: right;
 }
 
 .box line,

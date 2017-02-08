@@ -2,9 +2,9 @@
 window.onload=function(){
   var labels = false; // show the text labels beside individual boxplots?
 
-  var margin = {top: 30, right: 50, bottom: 70, left: 50};
-  var width = 800 - margin.left - margin.right;
-  var height = 400 - margin.top - margin.bottom;
+  var margin = {top: 30, right: 30, bottom: 70, left: 30};
+  var width = 680 - margin.left - margin.right;
+  var height = 350 - margin.top - margin.bottom;
 
   var min = Infinity,
       max = -Infinity;
@@ -196,16 +196,16 @@ window.onload=function(){
       .enter().append("g")
       .attr("class", "government")
       .attr("transform", function(d) {
-        return "translate(" +  (x(d[0]) + 20)  + "," + margin.top + ")"; } )
-        .call(chart.width(x.bandwidth() - 45));
+        return "translate(" +  (x(d[0]) + 10)  + "," + margin.top + ")"; } )
+        .call(chart.width(x.bandwidth() - 35));
 
   svg.selectAll(".non-government.box")
       .data(data1)
     .enter().append("g")
     .attr("class", "non-government")
     .attr("transform", function(d) {
-      return "translate(" +  (x(d[0]) + 35)  + "," + margin.top + ")"; } )
-      .call(chart.width(x.bandwidth() - 45));
+      return "translate(" +  (x(d[0]) + 30)  + "," + margin.top + ")"; } )
+      .call(chart.width(x.bandwidth() - 35));
 
     // add a title
     svg.append("text")
