@@ -1,4 +1,4 @@
-window.onload=function(){
+module.exports = function(d3){
   var labels = false; // show the text labels beside individual boxplots?
 
   var margin = {top: 30, right: 30, bottom: 70, left: 30};
